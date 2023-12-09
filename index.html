@@ -810,35 +810,37 @@
           <!-- contact item end -->
        </div>
        <div class="row">
-         <div class="contact-form">
-            <form>
-                  <div class="row">
-                      <div class="w-50">
-                         <div class="input-group outer-shadow hover-in-shadow">
-                           <input type="text" placeholder="Name" class="input-control">
-                         </div>
-                         <div class="input-group outer-shadow hover-in-shadow">
-                           <input type="text" placeholder="Email" class="input-control">
-                         </div>
-                         <div class="input-group outer-shadow hover-in-shadow">
-                           <input type="text" placeholder="Subject" class="input-control">
-                         </div>
-                      </div>
-                      <div class="w-50">
-                         <div class="input-group outer-shadow hover-in-shadow">
-                            <textarea class="input-control" placeholder="Message"></textarea>
-                         </div>
-                      </div>
-                  </div>
-                  <div class="row">
-                     <div class="submit-btn">
-                        <button type="submit" class="btn-1 outer-shadow hover-in-shadow">Send Message</button>
-                     </div>
-                  </div>
-            </form>
-         </div>
+           <div class="contact-form">
+               <form id="myForm" action="https://formspree.io/f/xpzgvlbj" method="post">
+                   <div class="row">
+                       <div class="w-50">
+                           <div class="input-group outer-shadow hover-in-shadow">
+                               <input type="text" name="name" placeholder="Name" class="input-control" required>
+                           </div>
+                           <div class="input-group outer-shadow hover-in-shadow">
+                               <input type="email" name="email" placeholder="Email" class="input-control" required>
+                           </div>
+                           <div class="input-group outer-shadow hover-in-shadow">
+                               <input type="text" name="subject" placeholder="Subject" class="input-control" required>
+                           </div>
+                       </div>
+                       <div class="w-50">
+                           <div class="input-group outer-shadow hover-in-shadow">
+                               <textarea name="message" class="input-control" placeholder="Message" required></textarea>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="row">
+                       <div class="submit-btn">
+                           <button type="submit" class="btn-1 outer-shadow hover-in-shadow">Send Message</button>
+                           <div id="successMessage" style="display:none; color: green; margin-top: 10px;">
+                               Email sent successfully!
+                           </div>
+                       </div>
+                   </div>
+               </form>
+           </div>
        </div>
-    </div>
  </section>
  <!-- contact section end -->
 
